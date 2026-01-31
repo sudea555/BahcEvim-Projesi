@@ -1,0 +1,13 @@
+/* Favoriler.css */
+.favoriler-container {
+    padding: 25px;
+    background-color: #f4fdf4; /* Hafif yeşil arka plan */
+    min-height: 100vh;
+}
+
+.favoriler-baslik {
+    color: #2e7d32;
+    font-size: 2rem;
+    border-bottom: 2px solid #2e7d32;
+    display: inline-block;
+}

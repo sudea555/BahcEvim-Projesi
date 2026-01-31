@@ -1,0 +1,106 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;          
+  background: linear-gradient(90deg, #1b5e20, #2e7d32);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* SOL */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-wrapper {
+  width: 56px;
+  height: 56px;
+  border: 3px solid #ff9800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.logo-wrapper img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 34px;     /* büyüttük */
+  font-weight: 700;
+  color: #ffb300;
+  letter-spacing: 0.8px;
+}
+
+
+/* ORTA */
+.header-search {
+  display: flex;
+  align-items: center;
+}
+
+.header-search input {
+  height: 38px;
+  width: 400px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  padding: 0 14px;
+  outline: none;
+}
+
+.header-search button {
+  height: 38px;
+  width: 42px;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  background: #ff9800;
+  cursor: pointer;
+}
+
+/* SAĞ */
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu a {
+  color: #ffb300;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  position: relative;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.header-menu a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+
+.sepet-sayi {
+  background: #ff6f00;
+  font-weight: 700;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}

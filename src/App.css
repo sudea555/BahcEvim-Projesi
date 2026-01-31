@@ -1,0 +1,21 @@
+/* Sayfanın en üstündeki ve yanındaki boşlukları sıfırlar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content h2 {
+  font-size: 3rem; /* Başlığı devasa yaptık */
+  color: #1b5e20; /* Daha koyu bir yeşil */
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-left: 8px solid #2e7d32; /* Soluna kalın bir çizgi ekledik */
+  padding-left: 20px;
+}

@@ -1,0 +1,589 @@
+/* src/index.css */
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+
+#root {
+  width: 100%;
+}
+.urun-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.urun-kart {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.urun-kart:hover {
+  transform: translateY(-5px);
+}
+
+.urun-resim {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.urun-icerik {
+  padding: 14px;
+  text-align: center;
+  background-color: white;
+}
+
+.urun-icerik h3 {
+  margin: 6px 0;
+  color: #2e7d32;
+}
+
+
+.urun-icerik p {
+  font-size: 14px;
+  color: #555;
+}
+
+.urun-fiyat {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+.urun-kart {
+  background: linear-gradient(180deg, #f1f8e9, #ffffff);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.urun-kart:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+.urun-kart button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff9800, #ffb300);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.urun-kart button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(255, 152, 0, 0.5);
+  background: linear-gradient(90deg, #fb8c00, #ffa000);
+}
+
+.urun-kart button:active {
+  transform: scale(0.98);
+}
+.sepet-sayfa {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.sepet-bos {
+  color: #777;
+  margin-top: 20px;
+}
+
+.sepet-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.sepet-kart {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sepet-kart img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+.sepet-icerik h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.sepet-icerik span {
+  color: #e65100;
+  font-weight: bold;
+}
+
+.sepet-toplam {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: right;
+}
+.sepet-baslik {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sepet-baslik h2 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  
+  letter-spacing: -0.3px;
+  font-family: 'Poppins', sans-serif;
+  color: #4e342e;            /* az önce seçtiğimiz premium renk */
+}
+
+
+.sepet-ikon {
+  font-size: 28px;
+}
+.sepet-baslik {
+  border-bottom: 2px solid #ffe0b2;
+  padding-bottom: 8px;
+}
+.sepet-sil {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #e53935;
+}
+
+.sepet-sil:hover {
+  transform: scale(1.2);
+}
+
+/* Ürünler grid */
+.urunler {
+  display: flex;
+  gap: 24px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* Kart */
+.urun-kart {
+  width: 260px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.urun-kart:hover {
+  transform: translateY(-4px);
+}
+
+.urun-kart img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Kart içi */
+.urun-icerik {
+  padding: 16px;
+  text-align: center;
+}
+
+.urun-icerik h3 {
+  margin: 6px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.urun-icerik p {
+  font-size: 13px;
+  color: #666;
+}
+
+.urun-fiyat {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Buton */
+.sepete-ekle {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sepete-ekle:hover {
+  background: #fb8c00;
+}
+
+.sayfa {
+  padding-top: 20px;
+}
+.favori-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.urun-kart {
+  position: relative;
+}
+
+/* Favoriler boş durum */
+.favori-bos {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  color: #444;
+}
+
+.favori-ikon {
+  font-size: 64px;
+}
+
+.favori-bos h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.favori-bos p {
+  max-width: 300px;
+  font-size: 14px;
+  color: #777;
+}
+
+.favori-buton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff9800;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.favori-buton:hover {
+  background: #fb8c00;
+}
+/* Profil sayfası */
+.profil-sayfa {
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.profil-baslik {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.profil-avatar-wrapper {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profil-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff9800;
+}
+
+.profil-foto-yazi {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
+}
+
+.profil-bilgiler {
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.profil-bilgi {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+.profil-bilgi input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+.profil-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #ff9800;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.profil-btn:hover {
+  background: #fb8c00;
+}
+.profil-istatistikler {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.profil-stat {
+  flex: 1;
+  background: #e8f5e9;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+}
+
+.profil-stat span {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.profil-stat strong {
+  font-size: 22px;
+  color: #2e7d32;
+}
+.profil-siparisler {
+  margin-top: 35px;
+  text-align: left;
+}
+
+.profil-siparisler h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1b5e20;
+}
+
+.siparis-kart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.siparis-kart div span {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.siparis-toplam {
+  font-weight: 600;
+  color: #ff9800;
+}
+
+.siparis-bos {
+  color: #777;
+  font-size: 14px;
+}
+.profil-logout {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #e53935;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.profil-logout:hover {
+  background: #d32f2f;
+}
+.profil-logout {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #e53935;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.profil-logout:hover {
+  background: #d32f2f;
+}
+/* FAVORILER */
+
+.favoriler-sayfa {
+  padding: 30px;
+}
+
+.favoriler-baslik {
+  font-size: 32px;
+  color: #1b5e20;
+  margin-bottom: 25px;
+}
+
+.favoriler-bos {
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  background: #f9fbe7;
+  border-radius: 14px;
+}
+
+.favoriler-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.favori-kart {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.favori-kart img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.favori-icerik {
+  padding: 14px;
+  text-align: center;
+}
+
+.favori-icerik h4 {
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.favori-icerik span {
+  display: block;
+  margin-bottom: 10px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.favori-icerik button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+}
+
+.favori-icerik button:hover {
+  background: #fb8c00;
+}
+.favoriler-bos {
+  margin-top: 80px;
+  text-align: center;
+  color: #777;
+}
+
+.favoriler-emoji {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.favoriler-bos p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.favoriler-gozat {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #ff9800;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.favoriler-gozat:hover {
+  background: #fb8c00;
+}
